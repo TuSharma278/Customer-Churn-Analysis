@@ -1,6 +1,7 @@
 ﻿gender,SeniorCitizen,Dependents,tenure,PhoneService,MultipleLines,InternetService,Contract,MonthlyCharges,Churn
 Female,0,No,1,No,No,DSL,Month-to-month,25,Yes
 Male,0,No,41,Yes,No,DSL,One year,25,No
+
 Female,0,Yes,52,Yes,No,DSL,Month-to-month,19,No
 Female,0,No,1,Yes,No,DSL,One year,76,Yes
 Male,0,No,67,Yes,No,Fiber optic,Month-to-month,51,No
