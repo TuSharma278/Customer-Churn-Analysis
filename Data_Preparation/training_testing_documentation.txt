@@ -1,0 +1,51 @@
+
+TRAINING AND TESTING SET DOCUMENTATION
+======================================
+
+Original preprocessed dataset:
+Total Records: 7043
+Total Columns: 10
+
+Data Split:
+Training Set = 80%
+Testing Set = 20%
+
+Training Set:
+Records: 5634
+Features: 10
+
+Training Target Composition:
+Non-Churn (0): 4139
+Churn (1): 1495
+
+Non-Churn Percentage:
+73.46%
+
+Churn Percentage:
+26.54%
+
+
+Testing Set:
+Records: 1409
+Features: 10
+
+Testing Target Composition:
+Non-Churn (0): 1035
+Churn (1): 374
+
+Non-Churn Percentage:
+73.46%
+
+Churn Percentage:
+26.54%
+
+
+Split Method:
+The dataset was divided using an 80/20 train-test split.
+
+random_state = 42 was used so that the same split
+can be reproduced.
+
+stratify = y was used to maintain approximately the
+same churn and non-churn proportions in both the
+training and testing datasets.
