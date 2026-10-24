@@ -1,0 +1,35 @@
+TEAM 5 — ARTIFICIAL NEURAL NETWORK ARCHITECTURE
+Project: Customer Churn Analysis for a Telecommunications Company
+Stage 3: Predictive Modelling
+
+1. Objective
+Build a supervised Artificial Neural Network (ANN) to estimate whether a telecommunications customer will churn using the prepared dataset and known Churn labels.
+
+2. Input data
+The target is the Churn column (Yes/No or equivalent binary values). The script removes the target and common customer ID columns from the predictors. The number of input nodes is determined by the columns after preprocessing and one-hot encoding.
+
+3. Network architecture
+Input layer: numeric predictors are median-imputed and standardised; categorical predictors are imputed using the most frequent category and one-hot encoded.
+Hidden layer 1: 64 neurons, ReLU activation.
+Hidden layer 2: 32 neurons, ReLU activation.
+Output layer: probability of churn, converted to a class using a default 0.50 threshold.
+
+4. Training configuration
+Model: feed-forward ANN using scikit-learn MLPClassifier.
+Optimiser: Adam.
+Loss: binary cross-entropy/log loss.
+Initial learning rate: 0.001.
+Regularisation: alpha = 0.001.
+Maximum iterations: 300.
+Early stopping: enabled.
+Random seed: 42.
+Data split: stratified 80% training / 20% testing.
+
+5. Evaluation
+The held-out test set is used to report accuracy, precision, recall, F1-score and ROC-AUC. A confusion matrix and ROC curve visualise test performance. The training-loss curve provides a basic view of optimisation progress. Accuracy should not be interpreted alone because churn classes may be imbalanced.
+
+6. Outputs and reproducibility
+The script saves the preprocessing/model pipeline, evaluation metrics, test predictions, confusion matrix, ROC curve and training-loss curve.
+
+7. Limitations
+Performance depends on the actual dataset and preprocessing. A single split may vary, and cross-validation can be added for stronger robustness. A 0.50 threshold may not be ideal for business costs. Predictions show associations and do not prove causes of churn. Report only metrics produced by the team's own run.
